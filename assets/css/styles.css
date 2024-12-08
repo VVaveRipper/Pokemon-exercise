@@ -470,6 +470,14 @@ align-items: center;
   object-fit: cover;
 }
 
+.video iframe {
+  width: 50%;
+  height: 500px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
 .galerie {
     display: flex;
   /* min-width: 100vw; */
@@ -557,5 +565,7 @@ align-items: center;
 
 @media (max-width: 480px) {
 } */
+
+
 
 
