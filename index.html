@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>TP2</title>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="nav-appear" style="display: none;">
+        <label class="navbutton" for="nav-appear">
+            <img src="assets/images/Pokeball_1.png" alt="">
+        </label>
+        <nav class="sidenav">
+            <div class="navspace">
+                <nav>
+                    <ul>
+                        <li><a href="#section1">Welcome</a></li>
+                        <li><a href="#section2">Sign-up</a></li>
+                        <li><a href="#section3">Stats</a></li>
+                        <li><a href="#section4">News</a></li>
+                        <li><a href="#section5">Videos</a></li>
+                        <li><a href="#section6">Gallery</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        <div><button class="buynow">Buy now</button></div>
+        <nav>
+            <ul>
+                <li><a href="#section1">Welcome</a></li>
+                <li><a href="#section2">Sign-up</a></li>
+                <li><a href="#section3">Stats</a></li>
+                <li><a href="#section4">News</a></li>
+                <li><a href="#section5">Videos</a></li>
+                <li><a href="#section6">Gallery</a></li>
+            </ul>
+        </nav>
+        <img class="banner" src="assets/images/Pokemon_Banner.png" alt="">
+        <img class="pokelogo" src="assets/images/Pokeball_3.png" alt="">
+
+    </header>
+
+    <main>
+        <section id="section1" class="accueil">
+            <h1>Welcome to the Unova region!</h1>
+            <div class="info">
+                <h3>TP2 <br>
+                Joshua Ouellette <br>
+                582-1W1-Mise en page Web <br>
+                Techniques d'intégration multimedia, Collège de Maisonneuve, automne 2024 <br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat dolor eos magnam</h3>
+            </div>
+            <div class="blur"></div>
+        
+        </section>
+        <!-- Section1 -->
+        <section id="section2" class="inscription">
+            <h1>Sign-up for further updates!</h1>
+
+
+            <form class="space">
+                <!-- Le Nom -->
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <!-- L'Email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <!-- Le Mot de passe -->
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <!-- Remember me please -->
+                <label for="checkbox">Remember me</label>
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <!-- Terms of service that nobody reads  -->
+                <label for="radio">I agree to the terms of service</label>
+                <input type="radio" id="radio" name="radio">
+                <!-- Yes o r no -->
+                <label class="yes" for="yes">Yes</label>
+                <input type="radio" id="yes" name="yes">
+                <!-- No or yes --> 
+                <label class="no" for="no">No</label>  
+                <input type="radio" id="no" name="no">
+                <!-- Sign up to pokemon!!!!! -->
+                <button class="signup">Sign up</button>
+            </form>
+
+
+            <div class="blur2"></div>
+        </section >
+        <!-- Section2 -->
+         <!-- <section class="tableau">
+            <h1>TEST</h1>
+         </section> -->
+        <section id="section3" class="tableau">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pokémon Black Exclusives</th>
+                        <th>Type</th>
+                        <th>Max BST</th>
+                        <th>Signature Move</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Reshiram</th>
+                        <th>Dragon/Fire</th>
+                        <th>680</th>
+                        <th>Blue Flare<br>(130 Power, Fire)</th>
+                    </tr>
+                    <tr>
+                        <th>Vulture</th>
+                        <th>Dark/Flying</th>
+                        <th>486</th>
+                        <th>Dark Rush<br>(80 Power, Dark)</th>
+                    </tr>
+                    <tr>
+                        <th>Gothitelle</th>
+                        <th>Psychic</th>
+                        <th>490</th>
+                        <th>Psyshock<br>(80 Power, Psychic)</th>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4">Total BST: 2056</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pokémon White Exclusives</th>
+                        <th>Type</th>
+                        <th>Max BST</th>
+                        <th>Signature Move</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Zekrom</th>
+                        <th>Dragon/Electric</th>
+                        <th>680</th>
+                        <th>Fusion Bolt<br>(130 Power, Electric)</th>
+                    </tr>
+                    <tr>
+                        <th>Mandibuzz</th>
+                        <th>Dark/Flying</th>
+                        <th>510</th>
+                        <th>Bone Rush<br>(85 Power, Ground)</th>
+                    </tr>
+                    <tr>
+                        <th>Reuniclus</th>
+                        <th>Psychic</th>
+                        <th>490</th>
+                        <th>Psychic<br>(90 Power, Psychic)</th>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4">Total BST: 2056</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <!-- Section3 -->
+        <article id="section4" class="articles">
+            <div class="title">
+                <h1>Check out the latest news!</h1>
+                <h3>You don't want to miss this!</h3>
+            </div>
+            <div class="news">
+                <p><img src="assets/images/items.webp" alt=""> Get ready for the new generation! It includes new Pokemon, new evolutions and new gym leaders! Prepare to become the best like no one ever was! Don't forget to check out the new Unova region! New features include the new Mega Evolution and the new Z-Move! New items include the new Z-Crystal and the new Z-Ring!</p>
+                <p><img src="assets/images/article1.webp" alt="">The long awaited 5th generation is finally having its remake! Many players are excited to dive into the new generation and experience its new features! Explore new areas and challenge some very iconic gym leaders from the Unova region. Don't forget about the stronger than ever Team Plasma!</p>
+                <p> <img src="assets/images/article2.webp" alt="">Discover new Pokemon and new evolutions that will change the way you look at the Pokemon universe. The Unova region is full of mysteries and you will have to solve them all to become the best like no one ever was!  Every gym leader has a unique playstyle and a new set of moves that will put your skills to the test!</p>
+            </div>
+        </article>
+
+        <!-- section de la video!!!1 -->
+        <div id="section5" class="video">
+            <iframe 
+                width="50%" 
+                height="500" 
+                src="https://www.youtube.com/embed/PrYtQMfcyKA" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Section4 -->
+        <figure id="section6" class="galerie">
+            <h1>Here are some of the best fan arts!</h1>
+            <div class="artwork">
+                <img src="assets/images/galerie1.jpg" alt="">
+                <img src="assets/images/galerie2.webp" alt="">
+                <img src="assets/images/galerie3.png" alt="">
+                <img src="assets/images/galerie4.jpg" alt="">
+                <img src="assets/images/galerie5.jpg" alt="">
+                <img src="assets/images/galerie6.jpg" alt="">
+            </div>
+        </figure>
+        <!-- Section5 -->
+
+        <!-- Section6 -->
+    </main>
+    <footer>
+        <h1>College de Maisonneuve <br>
+            Campus principal <br>
+            3800, rue Sherbrooke Est <br>
+            Montréal (Québec) H1X 2A2
+            Techniques d'intégration multimedia <br>
+            Collège de Maisonneuve <br>
+            automne 2024 <br>
+            privacy notice <br>
+            terms of service        
+        </h1>
+        <div class="socials">
+            <a href="https://facebook.com" target="_blank">
+                <img class="social" src="assets/images/icons8-facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img class="social" src="assets/images/icons8-instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img class="social" src="assets/images/icons8-twitter.svg" alt="Twitter">
+            </a>
+            <a href="https://youtube.com" target="_blank">
+                <img class="social" src="assets/images/icons8-youtube.svg" alt="YouTube">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

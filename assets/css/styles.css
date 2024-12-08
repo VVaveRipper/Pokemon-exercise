@@ -1,0 +1,561 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tiny5&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tiny5&display=swap");
+
+* {
+  border: 1px solid red;
+}
+
+/* :root{
+    --texte-size-s
+} */
+
+@keyframes Hover {
+  0% {
+      background-color: white;
+      color: black;
+      transform: translateY(0);
+  }
+  50% {
+      background-color: rgba(43, 43, 43, 0.637);
+      color: white;
+      -webkit-text-stroke: 1px black;
+      transform: translateY(-10px);
+  }
+  100% {
+      background-color: white;
+      color: black;
+      transform: translateY(0);
+  }
+}
+
+body,
+html {
+  scroll-behavior:smooth;
+  scroll-snap-type: y proximity;
+  scroll-snap-align: start;
+  height: 100vh;
+  /* width: 100vw; */
+  font-family: "Passion One", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  margin: 0;
+  padding: 0;
+}
+
+section, article, figure, video{
+    scroll-snap-align: start;
+}
+
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-bottom: 5px solid black;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  padding: 4rem;
+}
+
+header nav ul li a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+div button {
+  display: flex;
+}
+
+thead,
+tfoot {
+  background-color: #2c5e77;
+  color: #fff;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+
+table {
+  border-collapse: collapse;
+  border: 5px solid rgb(0, 0, 0);
+  font-size: 3rem;
+  letter-spacing: 1px;
+  height: 100%;
+  width: 80%;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 5px 5px;
+}
+
+
+td {
+  text-align: center;
+}
+
+footer{
+    display: flex;
+    background-color: black;
+    height: 20%;
+    color:white;
+    font-size: 1rem;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.navspace nav ul li a {
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.navspace nav ul li a:hover {
+    animation: Hover 1.5s ease-in-out infinite;
+}
+
+.navspace {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  transition: left 0.3s ease-in-out;
+  border-right: 5px solid black;
+  z-index: 10;
+}
+
+.navspace nav ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbutton {
+  position: fixed;
+  z-index: 1000;
+  height: 4rem;
+  width: 4rem;
+  top: 87vh;
+  left: 5vh;
+  border-radius: 25%;
+  padding: 0.5rem;
+  border: 2px solid black;
+}
+
+.navbutton img{
+  height: 100%;
+  width: 100%;
+}
+
+.navbutton::before {
+  display: contents;
+}
+
+.navbutton:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.navbutton:active {
+  background-color: orange;
+}
+
+.navbutton::after {
+  display: none;
+}
+
+.pokelogo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.banner {
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 3;
+}
+
+.buynow {
+  position: absolute;
+  right: 2rem;
+  top: 35%;
+  padding: 0.5rem 3rem;
+  background-color: #ff3e3e;
+  color: white;
+  font-family: "Passion One", sans-serif;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor:cell;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.buynow:hover {
+  background-color: white;
+  color: #ff3e3e;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.buynow:active {
+  transform: scale(0.5);
+}
+
+/* .space{
+    padding-top: 6rem;
+} */
+
+.accueil {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  /* min-width: 100vw; */
+  min-height: 100vh;
+  background-image: url(../images/Unova_map.jpg);
+  color: white;
+  font-size: 8rem;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  font-family: "Passion One", sans-serif;
+  background-repeat: no-repeat;
+  gap: 10rem; 
+}
+
+.accueil h1 {
+    position:relative;
+    top:50px;
+    font-size: 6rem;
+  -webkit-text-stroke: 2px black;
+  text-align: center;
+  z-index: 1;
+}
+
+.accueil h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke: 0.5px black;  
+    font-size: 1rem;  
+    z-index: 1;
+    text-align: center;
+    
+}
+
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* padding-left: 900px;
+  padding-bottom: 100px; */
+  /* flex-grow: 2; */
+}
+
+h3:nth-child(2), h3:nth-child(3), h3:nth-child(4), h3:nth-child(5), h3:nth-child(1){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blur{
+    position:absolute;
+    /* height: 100vh;
+    width:100vw; */
+    backdrop-filter: blur(2px);
+    background:linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.473) 35%,
+        rgba(255, 255, 255, 0.8)100%
+      );
+      inset:0;
+}
+
+.blur2{
+  position:absolute;
+  height: 100vh;
+  /* width:100vw; */
+  background:linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0)0%,
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 1, 0.5)100%
+  );
+  inset:0;
+}
+
+.inscription {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  /* min-width: 100vw; */
+  min-height: 100vh;
+  background-color: blueviolet;
+  color: white;
+  font-size: 5rem;
+  background-image: url(../images/Unova_Gym_Leaders_Background.png);
+  font-family: "Passion One", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  -webkit-text-stroke: 2px black;
+  gap: 3rem;
+}
+
+.inscription h1{
+  z-index: 1;
+}
+
+.space {
+  position: relative;
+  top: 0;
+  left: 0; 
+  border-radius: 10px;
+  border: 2px solid black;
+  height: 720px;
+  width: 600px;
+  background-color: aliceblue;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  gap: 1rem;
+  text-align: center; 
+}
+
+.yes, .no{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableau {
+    display: flex;
+  /* min-width: 100vw; */
+  min-height: 100vh;
+  background-image: url(../images/creating-pokemon-fan-art.jpg);
+  font-size: 5rem;
+  background-size: cover;
+justify-content: center;
+align-items: center;
+}
+
+.articles {
+  display: flex;
+  /* min-width: 100vw; */
+  min-height: 100vh;
+  background-color: brown;
+  color: white;
+  font-size: 5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  background:linear-gradient(
+    to top,
+    rgba(0, 151, 197, 0.993) 0%,
+    rgba(0, 219, 172, 0.473) 35%,
+    rgba(70, 155, 0, 0.623)100%
+  );
+  line-height: 1.5;
+  /* background-image: url(../images/hexagon.webp);
+  background-size: cover;
+  filter: opacity(0.5); */
+  
+}
+
+.news{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-text-stroke: 1px black;
+}
+
+.articles h3{
+  font-size: 3rem;
+}
+
+.articles img{
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: 2px solid black;
+  box-shadow: 0 0 100px 0 rgb(0, 0, 0);
+}
+
+.articles p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+}
+
+.video {
+  width: 100%;
+  /* min-width: 100vw; */
+  min-height: 100vh;
+  background-color: darkgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/video_back.jpg);
+  background-size: cover;
+  object-fit: cover;
+}
+
+.galerie {
+    display: flex;
+  /* min-width: 100vw; */
+  min-height: 100vh;
+  background-color: darkorange;
+  color: white;
+  font-size: 5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.galerie img{
+    height: 30%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 2px solid black;
+    box-shadow: 0 0 50px 0 rgb(0, 0, 0);
+}
+
+.artwork{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.social {
+    height: 5rem;
+    width: 5rem;
+}
+
+#invisible {
+  display: none;
+}
+
+#nav-appear:checked ~ .sidenav .navspace {
+  left: 0;
+  right:1000px;
+}
+
+#section3{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.socials a:hover {
+    transform: scale(1.2);
+}
+
+/* @media (max-width: 1200px) {
+  .pokelogo {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner {
+    height: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+}
+
+@media (max-width: 480px) {
+} */
+
+
